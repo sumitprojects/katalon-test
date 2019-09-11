@@ -12,22 +12,24 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-/*
- * Add this line if the keys are not working in your katalon
- * */ 
-import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('https://www.google.com/')
+WebUI.openBrowser('https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.co.in/')
 
-WebUI.setText(findTestObject('Object Repository/Page_Google/input_Sign in_q'), '')
+not_run: WebUI.navigateToUrl('https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.co.in/')
 
-WebUI.delay(2)
+WebUI.setText(findTestObject('Object Repository/Login_Objects/Page_Sign in - Google Accounts/input_Use your Google Account_identifier'), 
+    'sumit.templatic')
 
-WebUI.sendKeys(findTestObject('Object Repository/Page_Google/input_Sign in_q'), Keys.chord(Keys.ENTER))
+WebUI.click(findTestObject('Object Repository/Login_Objects/Page_Sign in - Google Accounts/span_Next'))
 
-WebUI.delay(2)
+WebUI.setEncryptedText(findTestObject('Object Repository/Login_Objects/Page_Sign in - Google Accounts/input_Too many failed attempts_password'), 
+    'FUS8lcXGduaZZKg9WZ54Tw==')
 
-WebUI.click(findTestObject('Object Repository/Page_Katalon - Google Search/div_Katalon_link'))
+WebUI.click(findTestObject('Object Repository/Login_Objects/Page_Sign in - Google Accounts/span_Next'))
+
+WebUI.click(findTestObject('Object Repository/Login_Objects/Page_Google/span_Collections_gb_Ba gbii'))
+
+WebUI.click(findTestObject('Object Repository/Login_Objects/Page_Google/a_Sign out'))
 
 not_run: WebUI.closeBrowser()
 
