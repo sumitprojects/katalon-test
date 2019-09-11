@@ -20,12 +20,12 @@ not_run: WebUI.navigateToUrl('https://accounts.google.com/ServiceLogin?hl=en&pas
 WebUI.setText(findTestObject('Object Repository/Login_Objects/Page_Sign in - Google Accounts/input_Use your Google Account_identifier'), 
     'sumit.templatic')
 
-WebUI.click(findTestObject('Object Repository/Login_Objects/Page_Sign in - Google Accounts/span_Next'))
+WebUI.click(findTestObject('Login_Objects/Page_Sign in - Google Accounts/span_Next'))
 
 WebUI.setEncryptedText(findTestObject('Object Repository/Login_Objects/Page_Sign in - Google Accounts/input_Too many failed attempts_password'), 
     'FUS8lcXGduaZZKg9WZ54Tw==')
 
-WebUI.click(findTestObject('Object Repository/Login_Objects/Page_Sign in - Google Accounts/span_Next'))
+WebUI.click(findTestObject('Login_Objects/Page_Sign in - Google Accounts/span_NextPassword'))
 
 WebUI.click(findTestObject('Object Repository/Login_Objects/Page_Google/span_Collections_gb_Ba gbii'))
 
