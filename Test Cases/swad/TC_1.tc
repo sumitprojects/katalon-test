@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_1</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c04eac2d-14bb-44fa-9355-a9c5a591ccda</testCaseGuid>
+   <variable>
+      <defaultValue>['kekanmanjusha@gmail.com']</defaultValue>
+      <description></description>
+      <id>12990dbf-004f-4724-95aa-26073c6992d4</id>
+      <masked>false</masked>
+      <name>email</name>
+   </variable>
+   <variable>
+      <defaultValue>['manjusha123']</defaultValue>
+      <description></description>
+      <id>bb1518fa-a319-4504-b048-fd012604bfa1</id>
+      <masked>false</masked>
+      <name>pass</name>
+   </variable>
+</TestCaseEntity>

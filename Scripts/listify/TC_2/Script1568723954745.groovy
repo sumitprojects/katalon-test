@@ -12,19 +12,28 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-for (def index : multipleinputdata) {
-    WebUI.navigateToUrl(rawurl)
+for (def index : (0..email.size()-1)) {
+    WebUI.navigateToUrl('https://listify-demos.astoundify.com/rentals/')
 
-    WebUI.setText(findTestObject('Page_Google/input_Sign in_q'), index)
+    WebUI.click(findTestObject('Object Repository/listify object/login/a_Log In'))
 
-    WebUI.sendKeys(findTestObject('Page_Google/input_Sign in_q'), Keys.chord(Keys.ENTER))
+    WebUI.setText(findTestObject('Object Repository/listify object/login/input__username'), email[index])
 
-    WebUI.delay(2)
+    WebUI.setText(findTestObject('Object Repository/listify object/login/input__password'), pass[index])
 
-    not_run: WebUI.click(findTestObject('Object Repository/Page_Google/b_rgam surat'))
+    WebUI.click(findTestObject('Object Repository/listify object/login/input__login'))
+
+    WebUI.mouseOver(findTestObject('listify object/login/mouse over'))
+
+    WebUI.click(findTestObject('Object Repository/listify object/login/a_Log Out'))
+
+    WebUI.delay(5)
 }
+
+not_run: WebUI.click(findTestObject('Page_Account  Listify Rentals/a_Confirm and log out'))
+
+not_run: WebUI.closeBrowser()
 

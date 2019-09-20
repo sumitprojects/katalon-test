@@ -12,19 +12,16 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-for (def index : multipleinputdata) {
-    WebUI.navigateToUrl(rawurl)
+WebUI.navigateToUrl('https://listify-demos.astoundify.com/rentals/')
 
-    WebUI.setText(findTestObject('Page_Google/input_Sign in_q'), index)
+WebUI.setText(findTestObject('Object Repository/listify object/search/input_Location_search_location'), 's')
 
-    WebUI.sendKeys(findTestObject('Page_Google/input_Sign in_q'), Keys.chord(Keys.ENTER))
+WebUI.delay(3)
 
-    WebUI.delay(2)
+WebUI.click(findTestObject('Object Repository/listify object/search/button_Search'))
 
-    not_run: WebUI.click(findTestObject('Object Repository/Page_Google/b_rgam surat'))
-}
+not_run: WebUI.closeBrowser()
 

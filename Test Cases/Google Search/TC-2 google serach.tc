@@ -5,4 +5,18 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>f2c941c1-fdf2-4011-a246-4e5a45b077ef</testCaseGuid>
+   <variable>
+      <defaultValue>['internet', 'browser', 'software']</defaultValue>
+      <description></description>
+      <id>e38a9a8c-df49-4154-9ec3-717d7204f6f5</id>
+      <masked>false</masked>
+      <name>multipleinputdata</name>
+   </variable>
+   <variable>
+      <defaultValue>'https://www.google.com/'</defaultValue>
+      <description></description>
+      <id>1a6b5a92-1529-4151-aca1-1cdfdee71ce0</id>
+      <masked>false</masked>
+      <name>rawurl</name>
+   </variable>
 </TestCaseEntity>

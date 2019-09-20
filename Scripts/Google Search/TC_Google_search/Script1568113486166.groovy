@@ -14,20 +14,24 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 /*
  * Add this line if the keys are not working in your katalon
- * */ 
-import org.openqa.selenium.Keys as Keys
+ *
+ * */ import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('https://www.google.com/')
+WebUI.openBrowser('')
 
-WebUI.setText(findTestObject('Object Repository/Page_Google/input_Sign in_q'), '')
+for (def index : inputMultiple) {
+    WebUI.navigateToUrl(testUrl)
 
-WebUI.delay(2)
+    WebUI.setText(findTestObject('Object Repository/Page_Google/input_Sign in_q'), index)
 
-WebUI.sendKeys(findTestObject('Object Repository/Page_Google/input_Sign in_q'), Keys.chord(Keys.ENTER))
+    WebUI.delay(2)
 
-WebUI.delay(2)
+    WebUI.sendKeys(findTestObject('Page_Google/input_Sign in_q'), Keys.chord(Keys.ENTER))
 
-WebUI.click(findTestObject('Object Repository/Page_Katalon - Google Search/div_Katalon_link'))
+    WebUI.delay(2)
+
+    WebUI.click(findTestObject('Object Repository/Page_Katalon - Google Search/div_Katalon_link'))
+}
 
 not_run: WebUI.closeBrowser()
 

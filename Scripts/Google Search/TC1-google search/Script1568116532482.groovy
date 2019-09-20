@@ -14,13 +14,17 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('https://www.google.com/')
+WebUI.openBrowser('')
 
-WebUI.setText(findTestObject('Object Repository/Page_Katalon - Google Search/Page_Google/input_Sign in_q'), 'websites')
+for (def index : testdata) {
+    WebUI.navigateToUrl('https://www.google.com/')
 
-WebUI.delay(2)
+    WebUI.setText(findTestObject('Object Repository/Page_Katalon - Google Search/Page_Google/input_Sign in_q'), index)
 
-WebUI.sendKeys(findTestObject('Page_Katalon - Google Search/Page_Google/input_Sign in_q'), Keys.chord(Keys.ENTER))
+    WebUI.delay(2)
 
-WebUI.click(findTestObject('Page_Katalon - Google Search/Page_websites - Google Search/h3_Create Your Free Website  Step-by-Step Website Creation'))
+    WebUI.sendKeys(findTestObject('Page_Katalon - Google Search/Page_Google/input_Sign in_q'), Keys.chord(Keys.ENTER))
+}
+
+WebUI.closeBrowser()
 

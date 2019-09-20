@@ -12,19 +12,22 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-for (def index : multipleinputdata) {
-    WebUI.navigateToUrl(rawurl)
+for (def index : (0..email.size()-1)) {
+    WebUI.navigateToUrl('http://demo2.wpdance.com/oswadmarket/?page_id=263')
 
-    WebUI.setText(findTestObject('Page_Google/input_Sign in_q'), index)
+    WebUI.setText(findTestObject('Object Repository/swad 2/input__username'), email[index])
 
-    WebUI.sendKeys(findTestObject('Page_Google/input_Sign in_q'), Keys.chord(Keys.ENTER))
+    WebUI.setText(findTestObject('swad 2/input__password'), pass[index])
+
+    WebUI.click(findTestObject('Object Repository/swad 2/input__login'))
 
     WebUI.delay(2)
 
-    not_run: WebUI.click(findTestObject('Object Repository/Page_Google/b_rgam surat'))
+    WebUI.click(findTestObject('Object Repository/swad 2/a_Logout'))
 }
+
+not_run: WebUI.closeBrowser()
 

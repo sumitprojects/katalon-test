@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_2</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ec561cbe-ee2a-4355-8f2a-cbdfe40fe062</testCaseGuid>
+   <variable>
+      <defaultValue>['Durincess1979@cuvox.de']</defaultValue>
+      <description></description>
+      <id>ffe24d8c-dbbc-4358-b25d-eda19d2a5cb1</id>
+      <masked>false</masked>
+      <name>email</name>
+   </variable>
+   <variable>
+      <defaultValue>['manjusha123']</defaultValue>
+      <description></description>
+      <id>b31b7fca-ccee-4b78-b82e-3da9c4d4d0fa</id>
+      <masked>false</masked>
+      <name>pass</name>
+   </variable>
+</TestCaseEntity>

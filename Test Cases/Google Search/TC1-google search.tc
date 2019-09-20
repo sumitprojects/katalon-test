@@ -5,4 +5,11 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>ba11e081-0f73-4276-94fa-ab2c2944c789</testCaseGuid>
+   <variable>
+      <defaultValue>['HTML', 'wordpress', 'php']</defaultValue>
+      <description></description>
+      <id>2a7ed889-bf3a-4a94-83a5-c91f0953bcf6</id>
+      <masked>false</masked>
+      <name>testdata</name>
+   </variable>
 </TestCaseEntity>

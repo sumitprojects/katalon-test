@@ -5,4 +5,25 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>97fc12c3-7867-4e18-ad0e-ed68793be726</testCaseGuid>
+   <variable>
+      <defaultValue>'Java'</defaultValue>
+      <description></description>
+      <id>533df7b3-6210-4ed0-921f-4bc460df9698</id>
+      <masked>false</masked>
+      <name>inputtestdata</name>
+   </variable>
+   <variable>
+      <defaultValue>['groovy', 'katalon', 'java', 'testing']</defaultValue>
+      <description></description>
+      <id>f83d095c-23f8-4ef3-8aa1-5e67a0608c97</id>
+      <masked>false</masked>
+      <name>inputMultiple</name>
+   </variable>
+   <variable>
+      <defaultValue>'https://www.google.com/'</defaultValue>
+      <description></description>
+      <id>e53ed6db-c8a9-4389-9743-d13383793902</id>
+      <masked>false</masked>
+      <name>testUrl</name>
+   </variable>
 </TestCaseEntity>

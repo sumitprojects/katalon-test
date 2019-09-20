@@ -12,19 +12,30 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-for (def index : multipleinputdata) {
-    WebUI.navigateToUrl(rawurl)
+WebUI.navigateToUrl('https://listify-demos.astoundify.com/rentals/')
 
-    WebUI.setText(findTestObject('Page_Google/input_Sign in_q'), index)
+WebUI.click(findTestObject('listify object/sign up/a_Sign Up'))
 
-    WebUI.sendKeys(findTestObject('Page_Google/input_Sign in_q'), Keys.chord(Keys.ENTER))
+WebUI.setText(findTestObject('listify object/sign up/input_First Name_sr_firstname'), 'manjusha')
 
-    WebUI.delay(2)
+WebUI.setText(findTestObject('listify object/sign up/input_Last Name_sr_lastname'), 'gire')
 
-    not_run: WebUI.click(findTestObject('Object Repository/Page_Google/b_rgam surat'))
-}
+WebUI.setText(findTestObject('listify object/sign up/input__email'), 'Durincess1979@cuvox.de')
+
+WebUI.setEncryptedText(findTestObject('listify object/sign up/input__password'), '/oi8xjQaoTvgiSPrrA3aGg==')
+
+WebUI.click(findTestObject('listify object/sign up/input_Anti-spam_register'))
+
+WebUI.click(findTestObject('listify object/sign up/li_ma'))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('listify object/sign up/li_ma'))
+
+WebUI.click(findTestObject('listify object/sign up/a_Log Out'))
+
+WebUI.closeBrowser()
 

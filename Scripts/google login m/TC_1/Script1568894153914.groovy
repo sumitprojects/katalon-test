@@ -12,19 +12,22 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-for (def index : multipleinputdata) {
-    WebUI.navigateToUrl(rawurl)
+WebUI.navigateToUrl('https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dgoogle+login%26rlz%3D1C1GGRV_enIN796IN796%26oq%3Dgoogle+login%26aqs%3Dchrome..69i57j69i64.8072j0j0%26sourceid%3Dchrome%26ie%3DUTF-8&flowName=GlifWebSignIn&flowEntry=ServiceLogin')
 
-    WebUI.setText(findTestObject('Page_Google/input_Sign in_q'), index)
+WebUI.setText(findTestObject('Object Repository/google login m/input_Use your Google Account'), 'kekanmanjusha@gmail.com')
 
-    WebUI.sendKeys(findTestObject('Page_Google/input_Sign in_q'), Keys.chord(Keys.ENTER))
+WebUI.click(findTestObject('Object Repository/google login m/span_Next'))
 
-    WebUI.delay(2)
+WebUI.setEncryptedText(findTestObject('Object Repository/google login m/input_Too many failed'), '/oi8xjQaoTvgiSPrrA3aGg==')
 
-    not_run: WebUI.click(findTestObject('Object Repository/Page_Google/b_rgam surat'))
-}
+WebUI.click(findTestObject('Object Repository/google login m/span_Next'))
+
+WebUI.click(findTestObject('Page_google login - Google Search/span_Accessibility feedback_gb_Ba gbii'))
+
+WebUI.click(findTestObject('Page_google login - Google Search/a_Sign out'))
+
+WebUI.closeBrowser()
 
